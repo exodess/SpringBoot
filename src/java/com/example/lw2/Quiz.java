@@ -1,16 +1,22 @@
 package com.example.lw2;
 
-import com.example.lw1.Question;
-
 import java.util.List;
 
-public class Quiz extends Question {
+public class Quiz {
     public Quiz(String title, String question, List<String> answers, int correct_answer) {
-        super(question, answers, correct_answer);
-        this._title = title;
+        this.title = title;
+        this.question = question;
+        this.answers = answers;
+        this.correct_answer = correct_answer;
     }
 
-    public String getTitle() { return _title; }
+    public String getTitle() { return title; }
+    public String getQuestion() { return question; }
+    public List<String> getAnswers() { return answers; }
+    public int getCorrectAnswer() { return correct_answer; }
 
-    final protected String _title;
+    final private String title;
+    final private String question;
+    final private List<String> answers;
+    final private int correct_answer;
 }
