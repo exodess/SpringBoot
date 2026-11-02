@@ -1,5 +1,3 @@
-package com.example.lw1;
-
 import java.util.List;
 
 public class Question {
