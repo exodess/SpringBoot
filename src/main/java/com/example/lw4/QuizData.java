@@ -4,10 +4,12 @@ import java.util.List;
 
 public class QuizData {
     QuizData(Quiz quiz) {
-        this.id = quiz.getId();
+        this.id = counter;
         this.title = quiz.getTitle();
         this.question = quiz.getQuestion();
         this.answers = quiz.getAnswers();
+
+        counter++;
     }
 
     public int getId() { return id; }
@@ -15,6 +17,7 @@ public class QuizData {
     public String getQuestion() { return question; }
     public List<String> getAnswers() { return answers; }
 
+    static private int counter;
     final private int id;
     final private String title;
     final private String question;
