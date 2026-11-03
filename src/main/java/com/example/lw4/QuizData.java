@@ -3,11 +3,11 @@ package com.example.lw4;
 import java.util.List;
 
 public class QuizData {
-    public QuizData(int id, String title, String question, List<String> answers) {
-        this.id = id;
-        this.title = title;
-        this.question = question;
-        this.answers = answers;
+    QuizData(Quiz quiz) {
+        this.id = quiz.getId();
+        this.title = quiz.getTitle();
+        this.question = quiz.getQuestion();
+        this.answers = quiz.getAnswers();
     }
 
     public int getId() { return id; }
