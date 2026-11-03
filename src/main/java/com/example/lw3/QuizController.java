@@ -1,8 +1,5 @@
 package com.example.lw3;
 
-import com.example.lw2.Quiz;
-import com.example.lw2.ApiResponse;
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,24 +11,24 @@ import java.util.List;
 
 @RestController
 public class QuizController {
-    private List<com.example.lw2.Quiz> quiz_list = List.of(
-            new com.example.lw2.Quiz("The Linux command", "Which command is used to list files and directories in a Linux terminal?",
+    private List<Quiz> quiz_list = List.of(
+            new Quiz("The Linux command", "Which command is used to list files and directories in a Linux terminal?",
                     List.<String>of("cat", "mkdir", "ls", "rm"), 3),
 
-            new com.example.lw2.Quiz("The PC memory", "Which of the following is considered volatile memory in a computer system?",
+            new Quiz("The PC memory", "Which of the following is considered volatile memory in a computer system?",
                     List.<String>of("HDD", "RAM", "SSD", "ROM"), 2),
 
-            new com.example.lw2.Quiz("The С++ file extension", "What is the correct file extension for a standard C++ source code file?",
+            new Quiz("The С++ file extension", "What is the correct file extension for a standard C++ source code file?",
                     List.<String>of(".cs", ".cpp", ".py", ".html"), 2),
 
-            new com.example.lw2.Quiz("The HTTP acronym", "What does the acronym HTTP stand for in networking?",
+            new Quiz("The HTTP acronym", "What does the acronym HTTP stand for in networking?",
                     List.<String>of(
                             "HyperText Transmission Process",
                             "Hyperlink Transfer Technology",
                             "HyperText Test Program",
                             "HyperText Transfer Protocol"), 4),
 
-            new com.example.lw2.Quiz("The Git command", "Which Git command is used to record changes to the local repository?",
+            new Quiz("The Git command", "Which Git command is used to record changes to the local repository?",
                     List.<String>of(
                             "git commit",
                             "git push",
@@ -53,7 +50,7 @@ public class QuizController {
     }
 
     @GetMapping("/api/quiz")
-    List<com.example.lw2.Quiz> getQuizList() {
+    List<Quiz> getQuizList() {
         return quiz_list;
     }
 

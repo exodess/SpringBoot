@@ -1,6 +1,5 @@
 package com.example.lw3;
 
-import com.example.lw3.Customer;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

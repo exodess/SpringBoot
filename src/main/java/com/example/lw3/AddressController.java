@@ -1,14 +1,12 @@
 package com.example.lw3;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
+@RestController
 public class AddressController {
     private final ConcurrentMap<String, String> addressBook = new ConcurrentHashMap<>();
 
@@ -41,10 +39,5 @@ public class AddressController {
         }
 
         return gen.generate(length);
-    }
-
-    @PostMapping("/getPassword")
-    ApiResponse getPassword(@Autowired PasswordGenerator gen, @RequestParam String length) {
-        return new ApiResponse(false, "Поле length должно быть числовым!");
     }
 }
