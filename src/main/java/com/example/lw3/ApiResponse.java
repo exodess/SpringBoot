@@ -1,4 +1,4 @@
-package com.example.lw2;
+package com.example.lw3;
 
 public class ApiResponse {
     public ApiResponse(boolean success, String feedback) {
